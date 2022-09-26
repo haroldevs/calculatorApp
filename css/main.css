@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .theme-blue {
+    /* Esto contiene un valor pero en este caso es un color */
+    --color-bg:hsl(222, 26%, 31%);
+    --color-number-key:hsl(221, 14%, 31%);
+    --color-bg-radio:hsl(223, 31%, 20%);
+    --color-bg-display: hsl(224, 36%, 15%);
+    --color-bg-key:hsl(223, 31%, 20%);
+    --color-bg-number:hsl(30, 25%, 89%);
+    --color-shadow-number-key:hsl(28, 16%, 65%);
+    --color-shadow-del-key:hsl(224, 28%, 35%);
+    --color-shadow-equal-key: hsl(6, 70%, 34%);
+    --color-big-number:hsl(30, 25%, 89%);
+    --color-header:hsl(30, 25%, 89%);
+    --color-bg-equal:hsl(6, 63%, 50%);
+    --color-bg-del:hsl(225, 21%, 49%);
+    --bg-radio: hsl(6, 63%, 50%);
+    --color-key-equal:hsl(30, 25%, 89%);
+    --color-key-del:hsl(30, 25%, 89%);
+    --color-number-key-hover:hsl(30, 25%, 99%);
+    --color-bg-equal-hover:hsl(6, 63%, 65%);
+    --color-bg-del-hover:hsl(225, 21%, 69%);
+  }
+  
+  .theme-white {
+    --color-bg: hsl(0, 0%, 90%);
+    --color-number-key:hsl(60, 10%, 19%);
+    --color-bg-radio: hsl(0, 5%, 81%);
+    --color-bg-display:hsl(0, 0%, 93%);
+    --color-bg-key: hsl(0, 5%, 81%);
+    --color-bg-number: hsl(45, 7%, 89%);
+    --color-shadow-number-key:hsl(35, 11%, 61%);
+    --color-shadow-del-key:hsl(185, 58%, 25%);
+    --color-shadow-equal-key:hsl(25, 99%, 27%);
+    --color-big-number: hsl(60, 10%, 19%);
+    --color-header:hsl(60, 10%, 19%);
+    --color-bg-equal: hsl(25, 98%, 40%);
+    --color-bg-del: hsl(185, 42%, 37%);
+    --bg-radio: hsl(25, 98%, 40%);
+    --color-key-equal:hsl(30, 25%, 89%);
+    --color-key-del:hsl(30, 25%, 89%);
+    --color-number-key-hover:hsl(45, 7%, 99%);
+    --color-bg-equal-hover:hsl(25, 98%, 60%);
+    --color-bg-del-hover:hsl(185, 42%, 57%);
+  }
+  
+  .theme-purple {
+    --color-bg: hsl(268, 75%, 9%);
+    --color-number-key:hsl(52, 100%, 62%);
+    --color-bg-radio: hsl(268, 71%, 12%);
+    --color-bg-display: hsl(268, 71%, 12%);
+    --color-bg-key: hsl(268, 71%, 12%);
+    --color-bg-number: hsl(268, 47%, 21%);
+    --color-shadow-number-key:hsl(290, 70%, 36%);
+    --color-shadow-del-key:hsl(285, 91%, 52%);
+    --color-shadow-equal-key:hsl(177, 92%, 70%);
+    --color-big-number: hsl(52, 100%, 62%);
+    --color-header:hsl(52, 100%, 62%);
+    --color-bg-equal: hsl(176, 100%, 44%);
+    --color-bg-del: hsl(281, 89%, 26%);
+    --bg-radio:hsl(176, 100%, 44%);
+    --color-key-equal:hsl(198, 20%, 13%);
+    --color-key-del:rgb(255, 255, 255);
+
+    --color-number-key-hover:hsl(268, 47%, 41%);
+    --color-bg-equal-hover:hsl(176, 100%, 65%);
+    --color-bg-del-hover:hsl(281, 89%, 56%);
+  }
+  
+  body {
+    background-color: var(--color-bg);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "League Spartan", sans-serif;
+  }
+
+  .number-theme{
+    color: var(--color-header);
+    display: flex;
+    justify-content: space-between;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: .8rem;
+    
+  }
+  
+  section {
+    width: 450px;
+  }
+  
+  .section-title-theme {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  
+  .calc{
+    display: flex;
+    /* align-items: center; */
+    font-size: 1.5rem;
+  }
+  .text-white {
+    color: var(--color-header);
+    font-size: 1.5rem;
+  }
+  
+  .text-theme{
+    color: var(--color-header);
+    padding-bottom: .2rem;
+  }
+
+  .section-theme {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+  }
+  input[type="radio"]:hover {
+    cursor: pointer;
+  }
+  
+  .section-inputs {
+    background-color: var(--color-bg-radio);
+    padding: 2px;
+    border-radius: 20px;
+    width: 57px;
+  }
+  
+  input[type="radio"]:after {
+    content: "";
+    border: 2px solid var(--color-bg-radio);
+    width: 15px;
+    height: 15px;
+    top: -2px;
+    left: -1px;
+    background-color: var(--color-bg-radio);
+    position: relative;
+    border-radius: 50%;
+    display: inline-block;
+    visibility: visible;
+  }
+  
+  input[type="radio"]:checked:after {
+    content: "";
+    border: 2px solid var(--color-bg-radio);
+    width: 15px;
+    height: 15px;
+    top: -2px;
+    left: -1px;
+    background-color: var(--bg-radio);
+    position: relative;
+    border-radius: 50%;
+    display: inline-block;
+    visibility: visible;
+  }
+  
+  .section-result {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: var(--color-bg-display);
+    height: 100px;
+  }
+  
+  .section-result h1 {
+    font-size: 3.2em;
+    margin-top: 10px;
+    color: var(--color-big-number);
+    text-align: right;
+  }
+  
+  .section-buttons {
+    background-color: var(--color-bg-key);
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .section-buttons div {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+
+
+  
+  .section-buttons div button {
+    background-color: var(--color-bg-number);
+    color: var(--color-number-key);
+    width: 90px;
+    height: 45px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 1.5em;
+    padding-top: 10px;
+    border: none;
+    padding-bottom: 10px;
+    font-weight: 700;
+    font-family: "League Spartan", sans-serif;
+    cursor: pointer;
+    box-shadow: 0px 4px 0px 0px var(--color-shadow-number-key);
+  }
+  
+  .btn-equal {
+    background-color: var(--color-bg-equal)!important;
+    color: var(--color-key-equal)!important;
+    box-shadow: 0px 4px 0px 0px var(--color-shadow-equal-key) !important;
+    
+  }
+
+.btn-equal:hover{
+    background-color: var(--color-bg-equal-hover)!important;
+}
+  
+  .btn-blue {
+    background-color: var(--color-bg-del) !important;
+    color: var(--color-key-del)!important;
+    box-shadow: 0px 4px 0px 0px var(--color-shadow-del-key) !important;
+  }
+  
+  .btn-blue:hover{
+    background-color: var(--color-bg-del-hover)!important;
+  }
+
+
+  .section-buttons div button:hover {
+    background-color: var(--color-number-key-hover);
+  }
+  .section-buttons div button:active{
+    transform: translateY(1.8px);
+  }
+  
+  .btn-big {
+    width: 200px !important;
+  }
+
+  @media (max-width:475px){
+    section{
+        width: 350px;
+    }
+    .section-buttons {
+        background-color: var(--color-bg-key);
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 12px;
+      }
+      .section-buttons div button {
+        width: 70px;
+        height: 70px;
+      }
+      .btn-big {
+        width: 155px !important;
+      }
+
+  }
